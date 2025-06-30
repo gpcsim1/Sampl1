@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ArcGIS Map Viewer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://js.arcgis.com/4.30/esri/themes/light/main.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="logo">Map Viewer</div>
+    <div class="lang-toggle">
+      <button id="lang-en" class="active">EN</button>
+      <button id="lang-ar">AR</button>
+    </div>
+  </header>
+  <div id="container">
+    <aside id="left-panel" class="panel">
+      <h3>Layers</h3>
+      <div id="layerList"></div>
+      <h3>Legend</h3>
+      <div id="legend"></div>
+    </aside>
+    <main id="mapDiv"></main>
+    <aside id="right-panel" class="panel collapsed">
+      <button id="query-toggle" class="panel-toggle">&#9664;</button>
+      <div class="query-content">
+        <h3>Query</h3>
+        <label for="layerSelect">Layer</label>
+        <select id="layerSelect"></select>
+        <label for="fieldSelect">Field</label>
+        <select id="fieldSelect"></select>
+        <label for="valueInput">Value</label>
+        <input type="text" id="valueInput">
+        <button id="applyFilter">Apply Filter</button>
+      </div>
+    </aside>
+    <div id="feature-table" class="collapsed"></div>
+  </div>
+  <footer class="app-footer">
+    <button id="measure-btn">Measure</button>
+    <button id="export-geojson">Export GeoJSON</button>
+    <button id="export-csv">Export CSV</button>
+    <div id="print"></div>
+  </footer>
+  <div id="loading" class="hidden">Loading...</div>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
