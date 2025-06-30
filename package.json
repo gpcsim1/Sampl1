@@ -2,6 +2,7 @@
   "name": "arcgis-map-viewer",
   "version": "1.0.0",
   "scripts": {
-    "test": "node test.js"
+    "test": "node test.js",
+    "start": "node server.js"
   }
 }

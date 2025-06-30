@@ -8,6 +8,7 @@ import Zoom from "https://js.arcgis.com/4.30/@arcgis/core/widgets/Zoom.js";
 import LayerList from "https://js.arcgis.com/4.30/@arcgis/core/widgets/LayerList.js";
 import Legend from "https://js.arcgis.com/4.30/@arcgis/core/widgets/Legend.js";
 import Expand from "https://js.arcgis.com/4.30/@arcgis/core/widgets/Expand.js";
+import esriConfig from "https://js.arcgis.com/4.30/@arcgis/core/config.js";
 import FeatureLayer from "https://js.arcgis.com/4.30/@arcgis/core/layers/FeatureLayer.js";
 import MapImageLayer from "https://js.arcgis.com/4.30/@arcgis/core/layers/MapImageLayer.js";
 import WMSLayer from "https://js.arcgis.com/4.30/@arcgis/core/layers/WMSLayer.js";
@@ -17,6 +18,9 @@ import Print from "https://js.arcgis.com/4.30/@arcgis/core/widgets/Print.js";
 import Search from "https://js.arcgis.com/4.30/@arcgis/core/widgets/Search.js";
 import Measurement from "https://js.arcgis.com/4.30/@arcgis/core/widgets/Measurement.js";
 import OverviewMap from "https://js.arcgis.com/4.30/@arcgis/core/widgets/OverviewMap.js";
+
+// load ArcGIS assets from the CDN
+esriConfig.assetsPath = "https://js.arcgis.com/4.30/assets";
 
 const map = new Map({
   basemap: "streets"
